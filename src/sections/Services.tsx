@@ -1,0 +1,97 @@
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+ // CardContent,
+} from '../components/Card.jsx';
+import { BorderBeam } from '../registry/magicui/border-beam.tsx';
+import { Layout, Server, Smartphone, Cloud } from 'lucide-react';
+
+const services = [
+  {
+    icon: <Layout className="h-6 w-6 text-primary" />,
+    title: 'Frontend Development',
+    description:
+      'Crafting intuitive and high-performance UIs that deliver seamless experiences across devices.',
+  },
+  {
+    icon: <Server className="h-6 w-6 text-[#e48dff]" />,
+    title: 'Backend Development',
+    description:
+      'Building robust, secure, and scalable server-side systems for smooth and powerful app operations.',
+  },
+  {
+    icon: <Smartphone className="h-6 w-6 text-[#86cad6]" />,
+    title: 'Mobile App Development',
+    description:
+      'Developing fast, elegant, and responsive mobile apps tailored for both iOS and Android platforms.',
+  },
+  {
+    icon: <Cloud className="h-6 w-6 text-[#74aff7]" />,
+    title: 'DevOps & Deployment',
+    description:
+      'Managing CI/CD pipelines, Docker, VPS hosting, and performance tuning to ensure uptime and stability.',
+  },
+];
+
+export default function Services() {
+  return (
+    <section
+      id="services"
+      className="py-20 px-4 md:px-16 bg-white bg-gradient-to-l from-gray-100 to-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 "
+    >
+      <div className="max-w-7xl  mx-40 text-center">
+        <h2 className="text-3xl md:text-4xl  font-bold text-gray-900  bg-gradient-to-r from-gray-300 to-primary bg-clip-text text-transparent mb-12">
+          My Services
+        </h2>
+  
+        <div className="grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-12 justify-center">
+          {services.map((service, index) => (
+          <Card
+  key={index}
+  className="relative bg-transparent border border-white/10 dark:border-white/10 backdrop-blur-md shadow-lg"
+>
+
+             <div className="relative pt-8">
+  {/* Icon bubble floating above */}
+  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-20">
+    <div className="p-5 bg-white dark:bg-neutral-800 rounded-full shadow-lg ring-1 ring-gray-200 dark:ring-neutral-700">
+      {service.icon}
+      
+    </div>
+    
+  </div>
+
+  {/* Card content */}
+  <CardHeader className="z-10 relative flex flex-col items-center text-center space-y-2">
+    <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
+      {service.title}
+    </CardTitle>
+    <CardDescription className="text-sm text-gray-600 dark:text-gray-300">
+      {service.description}
+    </CardDescription>
+  </CardHeader>
+</div>
+
+              <BorderBeam duration={6} size={120} />
+            </Card>
+          ))}
+        </div>
+
+        <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-16">
+  Whether you're a startup, agency, or individual with a bold idea — I'm here to help you bring it to life with thoughtful design and scalable tech.
+</p>
+<div className="mt-6">
+  <a
+    href="#contact"
+    className="inline-block px-6 py-2 text-white bg-primary hover:bg-primary-dark rounded-full shadow transition"
+  >
+    Let's Work Together
+  </a>
+</div>
+
+      </div>
+    </section>
+  );
+}  

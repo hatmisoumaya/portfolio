@@ -1,0 +1,64 @@
+{
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate developer who loves building modern web applications and exploring new technologies."
+  },
+  "services": {
+    "title": "Services",
+    "web": {
+      "title": "Web Development",
+      "description": "Modern, fast, and responsive websites using the latest technologies."
+    },
+    "mobile": {
+      "title": "Mobile Development",
+      "description": "Cross-platform mobile applications for iOS and Android."
+    },
+    "api": {
+      "title": "API Integration",
+      "description": "Building robust APIs and integrating third-party services."
+    }
+  },
+  "projects": {
+  "title": "Projects",
+  "description": "Some of the best work I've done, showcasing my skills and passion for development.",
+  "items": [
+    {
+      "title": "Portfolio Website",
+      "description": "A personal website to showcase my projects, skills, and contact information.",
+      "tech": ["Next.js", "Tailwind CSS", "i18next"]
+    },
+    {
+      "title": "E-Commerce Platform",
+      "description": "A complete platform for online dental equipment sales, including cart and admin dashboard.",
+      "tech": ["React", "ASP.NET", "PostgreSQL"]
+    },
+    {
+      "title": "AI Voice Enhancer",
+      "description": "An AI-powered tool to improve and beautify voice recordings in real-time.",
+      "tech": ["Python", "TensorFlow", "Streamlit"]
+    }
+  ]
+}
+,"footer": {
+  "text": "© 2025 Soumaya El Hatmi. All rights reserved.",
+  "builtWith": "Built with ❤️ using Next.js and Tailwind CSS"
+}
+,"contact": {
+  "title": "Contact Me",
+  "description": "Feel free to reach out for collaborations or just a friendly hello!",
+  "email": "info@pamia.es",
+  "phone": "+212 6 12 34 56 78",
+  "location": "Casablanca, Morocco"
+}
+,"hero": {
+  "title": "Hello, I'm Soumaya El Hatmi",
+  "subtitle": "A passionate developer with a love for creating modern web applications.",
+  "cta": "Explore My Work"}
+,"navbar": {
+  "home": "Home",
+  "about": "About",
+  "services": "Services",
+  "projects": "Projects",
+  "contact": "Contact"
+}
+}
