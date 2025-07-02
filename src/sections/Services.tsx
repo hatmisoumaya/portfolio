@@ -42,41 +42,34 @@ export default function Services() {
       className="py-20 px-4 md:px-16 bg-white bg-gradient-to-l from-gray-100 to-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 "
     >
       <div className="max-w-7xl  mx-40 text-center">
-        <h2 className="text-3xl md:text-4xl  font-bold text-gray-900  bg-gradient-to-r from-gray-300 to-primary bg-clip-text text-transparent mb-12">
+        <h2 className="text-3xl md:text-4xl  my-6  font-bold text-gray-900  bg-gradient-to-r from-gray-300 to-primary bg-clip-text text-transparent mb-12">
           My Services
         </h2>
   
         <div className="grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-12 justify-center">
-          {services.map((service, index) => (
-          <Card
-  key={index}
-  className="relative bg-transparent border border-white/10 dark:border-white/10 backdrop-blur-md shadow-lg"
->
+         {services.map((service, index) => (
+  <BorderBeam key={index}>
+    <div className="relative pt-8 px-4 py-6 rounded-xl shadow-lg backdrop-blur-md">
+      {/* Icon bubble */}
+      <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="p-5 bg-white dark:bg-neutral-800 rounded-full shadow-lg ring-1 ring-gray-200 dark:ring-neutral-700">
+          {service.icon}
+        </div>
+      </div>
 
-             <div className="relative pt-8">
-  {/* Icon bubble floating above */}
-  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-20">
-    <div className="p-5 bg-white dark:bg-neutral-800 rounded-full shadow-lg ring-1 ring-gray-200 dark:ring-neutral-700">
-      {service.icon}
-      
+      {/* Card content */}
+      <CardHeader className="z-10 relative flex flex-col items-center text-center space-y-2">
+        <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
+          {service.title}
+        </CardTitle>
+        <CardDescription className="text-sm text-gray-600 dark:text-gray-300">
+          {service.description}
+        </CardDescription>
+      </CardHeader>
     </div>
-    
-  </div>
+  </BorderBeam>
+))}
 
-  {/* Card content */}
-  <CardHeader className="z-10 relative flex flex-col items-center text-center space-y-2">
-    <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
-      {service.title}
-    </CardTitle>
-    <CardDescription className="text-sm text-gray-600 dark:text-gray-300">
-      {service.description}
-    </CardDescription>
-  </CardHeader>
-</div>
-
-              <BorderBeam duration={6} size={120} />
-            </Card>
-          ))}
         </div>
 
         <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-16">

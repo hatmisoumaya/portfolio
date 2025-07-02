@@ -33,7 +33,7 @@ i18n
             description2:
               'My experience spans the full development lifecycle — from planning and UI/UX thinking, to backend logic and deployment. I’ve contributed to a range of impactful projects, including internal business tools, client-facing platforms, and data-driven solutions.',
           },
-        },contact: {
+        contact: {
       title: "Let's Connect",
       description: "Got a project in mind or just want to say hello? Reach me directly:",
       email: "Email",
@@ -69,8 +69,8 @@ i18n
           desc: "Managing CI/CD pipelines, Docker, VPS hosting, and performance tuning to ensure uptime and stability.",
         },
       },
-    },},
-  },
+    },},}
+  ,
   fr: {
     translation: {
         hero: {
@@ -97,7 +97,7 @@ i18n
             description2:
               'Mon expérience couvre l’ensemble du cycle de développement — de la planification et la conception UX/UI à la logique backend et au déploiement. J’ai contribué à une variété de projets impactants, notamment des outils internes, des plateformes orientées client et des solutions basées sur les données.',
           },
-        },contact: {
+       contact: {
       title: "Restons en contact",
       description: "Un projet en tête ou juste envie de dire bonjour ? Contactez-moi directement :",
       email: "E-mail",
@@ -135,13 +135,14 @@ i18n
           desc: "Gestion des pipelines CI/CD, de l'hébergement VPS et de l'optimisation des performances pour garantir la stabilité.",
         },
       },
-    },},
+    },}, },},
   
 
     fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false,
-    },
+   interpolation: {
+    escapeValue: false,
+  },
+ 
   });
 
 export default i18n;

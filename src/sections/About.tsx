@@ -29,7 +29,7 @@ const About = () => {
         </a>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
         {/* Left: Main Text Card */}
         <div className="flex-1 relative rounded-2xl border border-white/10 bg-white/70 dark:bg-gray-800 backdrop-blur-md shadow-xl p-6 md:p-12">
           <p className="text-md leading-relaxed">

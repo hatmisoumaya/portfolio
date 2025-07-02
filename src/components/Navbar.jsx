@@ -15,15 +15,27 @@ const Navbar = () => {
     document.documentElement.classList.toggle('dark', newMode);
     localStorage.setItem('theme', newMode ? 'dark' : 'light');
   };
+const [lang, setLang] = useState(i18n.language);
 
-  const LangSwitcher = () => (
-    <button
-      onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'fr' : 'en')}
-      className="flex items-center gap-1 text-sm px-2 py-1.5 rounded-full hover:bg-white hover:text-[#1B3D2F] transition"
-    >
-      <FaGlobe size={14} /> {i18n.language.toUpperCase()}
-    </button>
-  );
+useEffect(() => {
+  const handleLangChange = (lng) => setLang(lng);
+  i18n.on('languageChanged', handleLangChange);
+  return () => i18n.off('languageChanged', handleLangChange);
+}, []);
+const LangSwitcher = () => (
+  <button
+    onClick={() => {
+      const nextLang = i18n.language === 'en' ? 'fr' : 'en';
+      
+      i18n.changeLanguage(nextLang);
+      setLang(nextLang); // <- this ensures re-render
+    }}
+    className="flex items-center gap-1 text-sm px-2 py-1.5 rounded-full hover:bg-white hover:text-[#1B3D2F] transition"
+  >
+    <FaGlobe size={14} /> {lang.toUpperCase()}
+  </button>
+);
+
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
@@ -38,7 +50,7 @@ const Navbar = () => {
         ? 'bg-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 text-gray-800 shadow-md'
         : 'bg-transparent dark:shadow-gray-900 shadow-lg'} z-50 px-4 py-2`}>
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
-        <div className="flex items-center pl-10 gap-2 text-xl bg-gradient-to-r from-gray-300 to-primary bg-clip-text text-transparent font-poppins font-semibold text-gray-300">
+        <div className="flex items-center pl-10 gap-2 text-xl bg-gradient-to-r from-white to-primary bg-clip-text text-transparent font-poppins font-semibold text-gray-300">
           EL.HATMI
         </div>
 

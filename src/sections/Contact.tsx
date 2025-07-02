@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
+import { BorderBeam } from '../registry/magicui/border-beam.tsx';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -36,9 +37,11 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 text-gray-800 dark:text-white">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-left">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-left">
         {/* Right Column - Contact Form */}
-        <div className="md:col-span-2">
+              <BorderBeam className="md:col-span-2" >
+
+        <div >
           <form
             ref={form}
             onSubmit={sendEmail}
@@ -96,7 +99,7 @@ const Contact = () => {
               )}
             </div>
           </form>
-        </div>
+        </div></BorderBeam>
 
         {/* Left Column - Info */}
         <div className="border-l-4 border-primary pl-6 md:mt-10">

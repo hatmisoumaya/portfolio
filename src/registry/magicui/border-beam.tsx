@@ -1,5 +1,3 @@
-import React from "react";
-
 export const BorderBeam = ({
   children,
   className,
@@ -8,11 +6,14 @@ export const BorderBeam = ({
   className?: string;
 }) => {
   return (
-    <div
-      className={`relative z-10 overflow-hidden border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 ${className}`}
-    >
-<div className="absolute inset-[1px] rounded-[inherit] bg-white/5 dark:bg-white/5 backdrop-blur-md z-10"></div>
-      {children}
+    <div className={`relative z-0 rounded-xl p-[1px] ${className}`}>
+      {/* Gradient border layer */}
+      <div className="absolute inset-0 z-[-1] rounded-[inherit] bg-[conic-gradient(from_0deg,_#a78bfa,_#ec4899,_#f59e0b,_#6366f1,_#a78bfa)] animate-spin-slower blur-sm opacity-200" />
+      
+      {/* Card content wrapper */}
+      <div className="rounded-[inherit] bg-white dark:bg-neutral-950 p-6 z-10 relative">
+        {children}
+      </div>
     </div>
   );
 };

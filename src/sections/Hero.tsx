@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BorderBeam } from '../registry/magicui/border-beam';
 import { TypingAnimation } from '../registry/magicui/typing-animation';
 
 const Hero = () => {
@@ -38,8 +37,6 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* Optional visual accent */}
-        <BorderBeam size={250} duration={4000} delay={1000} />
       </div>
     </section>
   );

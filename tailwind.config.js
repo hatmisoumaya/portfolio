@@ -17,6 +17,19 @@ primary: '#6A80B9',
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      // tailwind.config.js
+
+     animation: {
+            'spin-slow': 'spin 8s linear infinite',
+
+        marquee: 'marquee 20s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
     },
   },
   plugins: [],
