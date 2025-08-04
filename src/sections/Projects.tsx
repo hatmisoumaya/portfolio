@@ -7,46 +7,57 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const projects = [
-{
-    title: 'Arvisaok website',
-    description: 'A modern WordPress website for an Arvisaok agency.',
+  {
+    title: 'ArvisaOK Website',
+    description: 'Official website for an educational agency that helps Moroccan students study in Spain with visa, university, and relocation support.',
     image: '/projects/arvisaok.png',
-    tags: ['WordPress', 'Elemontor'],
+    tags: ['WordPress', 'Elementor', 'Multi-language'],
     link: 'https://arvisaok.com',
   },
   {
-    title: 'Pamia website',
-    description: 'A modern online store for dentists using React, Stripe & PostgreSQL.',
+    title: 'Pamia Website',
+    description: 'Corporate site for Pamia, a Barcelona-based food manufacturing company that produces dairy and bakery goods under the Esmilki brand.',
     image: '/projects/pamia.png',
-    tags: ['React', 'vite', 'Tailwind CSS'],
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Static Website'],
     link: 'https://pamia.es',
-  }, {
+  },
+      {
+  title: 'Portfolio',
+  description: 'A personal developer portfolio featuring a floating AI chatbot, project carousel, multi-language support, and modern UI/UX design.',
+  image: '/projects/portfolio.png',
+  tags: ['Next.js', 'Tailwind CSS', 'i18next', 'Chatbot', 'Groq', 'FastAPI'],
+  link: '#',
+},
+  {
     title: 'Dental E-commerce',
-    description: 'A modern online store for dentists using React, Stripe & PostgreSQL.',
+    description: 'An e-commerce store for dental equipment, featuring Stripe integration, product management, and a secure checkout system.',
     image: '/projects/dental-ecom.jpg',
-    tags: ['React', 'Stripe', 'PostgreSQL'],
+    tags: ['React', 'PostgreSQL', 'Stripe', 'Admin Panel'],
     link: '#',
-  },   {
+  },
+  {
     title: 'Dental E-commerce',
-    description: 'A modern online store for dentists using React, Stripe & PostgreSQL.',
+    description: 'An e-commerce store for dental equipment, featuring Stripe integration, product management, and a secure checkout system.',
     image: '/projects/dental-ecom.jpg',
-    tags: ['React', 'Stripe', 'PostgreSQL'],
+    tags: ['React', 'PostgreSQL', 'Stripe', 'Admin Panel'],
     link: '#',
-  }, 
- {
-    title: 'Movio app',
-    description: 'A modern movies app, built with Next.js and Tailwind CSS.',
+  },
+  {
+    title: 'Movio App',
+    description: 'A sleek movie discovery app built with Next.js and Tailwind, allowing users to browse, watch trailers, and explore movie details.',
     image: '/projects/movio.png',
-    tags: ['Nextjs'],
+    tags: ['Next.js', 'Tailwind CSS', 'TMDB API'],
     link: '#',
-  },  {
-    title: 'EasYmatch app',
-    description: 'A modern AI job matching platform',
+  },
+  {
+    title: 'Easymatch App',
+    description: 'An AI-powered job-matching platform that analyzes resumes and job descriptions to connect candidates with ideal roles.',
     image: '/projects/easymatch.png',
-    tags: ['React', 'Stripe', 'PostgreSQL'],
+    tags: ['React', 'AI', 'FastAPI', 'Groq', 'PostgreSQL'],
     link: '#',
   }
 ];
+
 
 const Projects = () => {
   return (
