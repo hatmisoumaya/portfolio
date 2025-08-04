@@ -42,14 +42,13 @@ export default function Services() {
       className="py-20 px-4 md:px-16 bg-white bg-gradient-to-l from-gray-100 to-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 "
     >
       <div className="max-w-7xl  mx-40 text-center">
-        <h2 className="text-3xl md:text-4xl  my-6  font-bold text-gray-900  bg-gradient-to-r from-gray-300 to-primary bg-clip-text text-transparent mb-12">
-          My Services
+        <h2 className="text-3xl pb-1 md:text-4xl  my-6  font-bold text-gray-900  bg-gradient-to-r from-gray-300 to-primary bg-clip-text text-transparent mb-12">
+          Services
         </h2>
-  
         <div className="grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-12 justify-center">
          {services.map((service, index) => (
   <BorderBeam key={index}>
-    <div className="relative pt-8 px-4 py-6 rounded-xl shadow-lg backdrop-blur-md">
+    <div className="relative pt-8 px-4 py-6 ">
       {/* Icon bubble */}
       <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-20">
         <div className="p-5 bg-white dark:bg-neutral-800 rounded-full shadow-lg ring-1 ring-gray-200 dark:ring-neutral-700">

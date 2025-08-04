@@ -3,12 +3,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { TypingAnimation } from '../registry/magicui/typing-animation';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import { BorderBeam } from '../registry/magicui/border-beam.tsx';
 
 const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white dark:bg-gradient-to-l bg-white bg-gradient-to-l from-gray-100 to-white dark:from-black dark:to-gray-700 pt-[13%] pb-[9%] px-6 md:px-16">
+    <section className="bg-white dark:bg-gradient-to-l bg-white bg-gradient-to-l from-gray-100 to-white dark:from-black dark:to-gray-700 pt-[16%] pb-[9%] px-6 md:px-16">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-6">
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
@@ -23,18 +25,21 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="#portfolio"
-            className="bg-gradient-to-r from-gray-900 to-primary hover:bg-yellow-600 text-white font-medium px-6 py-2 rounded-lg transition"
-          >
-            {t('hero.portfolio')}
-          </a>
-          <a
+        <BorderBeam > <a
             href="#contact"
-            className="border border-gray-800 dark:border-white text-gray-800 dark:text-white font-medium px-6 py-2 rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="text-gray-800 dark:text-white font-medium transition hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             {t('hero.hire')}
-          </a>
+          </a></BorderBeam>
+           <a href="https://github.com/hatmisoumaya" target="_blank" rel="noreferrer">
+      <Github className="w-5 h-5 my-4 text-black dark:text-white" />
+    </a>
+    <a href="https://linkedin.com/in/soumaya-el-hatmi-837324246" target="_blank" rel="noreferrer">
+      <Linkedin className="w-5 h-5 my-4 text-black dark:text-white" />
+    </a>
+    <a href="mailto:hatmi.soumayatech@gmail.com">
+      <Mail className="w-5 h-5 my-4 text-black dark:text-white" />
+    </a>
         </div>
 
       </div>

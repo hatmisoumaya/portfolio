@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import { BorderBeam } from '../registry/magicui/border-beam.tsx';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -36,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 text-gray-800 dark:text-white">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-l from-gray-100 to-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 text-gray-800 dark:text-white">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-left">
         {/* Right Column - Contact Form */}
               <BorderBeam className="md:col-span-2" >
@@ -45,7 +46,7 @@ const Contact = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="bg-white dark:bg-gray-800 backdrop-blur-xl border border-white/10 shadow-md rounded-xl p-6 space-y-6"
+            className="bg-white dark:bg-transparent gray-900 backdrop-blur-xl p-6 space-y-6"
           >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -106,9 +107,7 @@ const Contact = () => {
           <h2 className="text-3xl md:text-4xl bg-gradient-to-r from-gray-300 to-primary bg-clip-text text-transparent font-bold mb-4">
             {t('contact.title')}
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-400 mb-3">
-            {t('contact.description')}
-          </p>
+     
           <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
             <div>
               <strong>{t('contact.email')}:</strong>
@@ -122,7 +121,20 @@ const Contact = () => {
               <strong>{t('contact.location')}:</strong>
               <p className="mt-1">{t('contact.address')}.</p>
             </div>
-          </div>
+          </div> <div className="hidden md:flex flex-row gap-4 pt-7">
+  <div className="flex items-center justify-start gap-4 bg-white/80 dark:bg-black backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-lg rounded-3xl p-4">
+    <a href="https://github.com/hatmisoumaya" target="_blank" rel="noreferrer">
+      <Github className="w-5 h-5 text-black dark:text-white" />
+    </a>
+    <a href="https://linkedin.com/in/soumaya-el-hatmi-837324246" target="_blank" rel="noreferrer">
+      <Linkedin className="w-5 h-5 text-black dark:text-white" />
+    </a>
+    <a href="mailto:hatmi.soumayatech@gmail.com">
+      <Mail className="w-5 h-5 text-black dark:text-white" />
+    </a>
+  </div>
+</div>
+
         </div>
       </div>
     </section>

@@ -8,7 +8,6 @@ import Projects from './sections/Projects';
 import AboutMe from './sections/About';
 import Footer from './components/Footer';
 import Contact from './sections/Contact';
-
 function App() {
   const [isReady, setIsReady] = useState(false); // avoid FOUC
 
@@ -32,8 +31,9 @@ function App() {
       <main>
         <Hero />
         <HighlightScroller />
+
       </main>
-      <AboutMe />
+      {/* <AboutMe /> */}
       <Services />
       <Projects />
       <Contact />

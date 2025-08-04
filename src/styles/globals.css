@@ -1,0 +1,10 @@
+/* Add this in your global CSS file (e.g., styles/globals.css) */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-gray-600 w-8 h-8; /* smaller and gray */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.25rem; /* smaller icon */
+}

@@ -50,14 +50,14 @@ const LangSwitcher = () => (
         ? 'bg-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 text-gray-800 shadow-md'
         : 'bg-transparent dark:shadow-gray-900 shadow-lg'} z-50 px-4 py-2`}>
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
-        <div className="flex items-center pl-10 gap-2 text-xl bg-gradient-to-r from-white to-primary bg-clip-text text-transparent font-poppins font-semibold text-gray-300">
+        <div className="flex items-center pl-10 gap-2 text-xl bg-gradient-to-r from-gray-300  to-[#6366f1] bg-clip-text text-transparent font-poppins font-semibold text-gray-300">
           EL.HATMI
         </div>
 
         <ul className="hidden md:flex items-center space-x-6 dark:text-gray-400 text-sm font-bold">
-          <li><a href="#home" className="hover:text-primary font-semibold">{t('nav.home')}</a></li>
+          <li><a href="#home" className="hover:text-primary">{t('nav.home')}</a></li>
           <li><a href="#services" className="hover:text-primary">{t('nav.services')}</a></li>
-          <li><a href="#about" className="hover:text-primary">{t('nav.about')}</a></li>
+          {/* <li><a href="#about" className="hover:text-primary">{t('nav.about')}</a></li> */}
           <li><a href="#projects" className="hover:text-primary">{t('nav.projects')}</a></li>
           <li>
             <a

@@ -10,16 +10,16 @@ import {
 import { SiTailwindcss, SiPostgresql, SiNextdotjs, SiDotnet } from 'react-icons/si';
 
 const techStack = [
-  { name: 'React', icon: <FaReact size={18} /> },
-  { name: 'Next.js', icon: <SiNextdotjs size={18} /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss size={18} /> },
-  { name: '.NET Core', icon: <SiDotnet size={18} /> },
-  { name: 'PostgreSQL', icon: <SiPostgresql size={18} /> },
-  { name: 'Docker', icon: <FaDocker size={18} /> },
-  { name: 'Git', icon: <FaGitAlt size={18} /> },
-  { name: 'HTML5', icon: <FaHtml5 size={18} /> },
-  { name: 'CSS3', icon: <FaCss3Alt size={18} /> },
-  { name: 'Node.js', icon: <FaNodeJs size={18} /> },
+  { name: 'React', icon: <FaReact size={18} className='text-[#ec4899]' /> },
+  { name: 'Next.js', icon: <SiNextdotjs size={18} className='text-[#6366f1]' /> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss size={18} className='text-[#A9B5DF]'/> },
+  { name: '.NET Core', icon: <SiDotnet size={18} className='text-[#6366f1]'/> },
+  { name: 'PostgreSQL', icon: <SiPostgresql size={18} className='text-[#B692C2]' /> },
+  { name: 'Docker', icon: <FaDocker size={18} className='text-[#6366f1]'/> },
+  { name: 'Git', icon: <FaGitAlt size={18} className='text-[#B692C2]'/> },
+  { name: 'HTML5', icon: <FaHtml5 size={18} className='text-[#ec4899]'/> },
+  { name: 'CSS3', icon: <FaCss3Alt size={18} className='text-[#C5BAFF]'/> },
+  { name: 'Node.js', icon: <FaNodeJs size={18} className='text-[#ec4899]'/> },
 ];
 
 const HighlightScroller = () => {
@@ -28,7 +28,7 @@ const HighlightScroller = () => {
   return (
     <div className="relative">
       {/* Angled Green Background */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-primary to-gray-900 transform -skew-y-2 origin-top z-0" />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#e0f3ff] via-[#f0f5ff] to-[#6366f1] transform -skew-y-2 origin-top z-0" />
 
       {/* Scrolling Highlight Bar */}
       <div className="relative z-10 bg-white shadow-lg dark:bg-black py-3 overflow-hidden">

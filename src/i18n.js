@@ -39,13 +39,15 @@ i18n
       email: "Email",
       phone: "Phone",
       location: "Location",
+      address:"Tangier, Morocco",
+
       send: "Send Message",
       form: {
         name: "Name",
         email: "Email",
         message: "Message",
       }},footer: {
-      rights: "All rights reserved.",
+      rights: "Copyright © —  EL.HATMI 2025.",
     } ,   services: {
       title: "My Services",
       workTogether: "Let's Work Together",
@@ -103,6 +105,7 @@ i18n
       email: "E-mail",
       phone: "Téléphone",
       location: "Localisation",
+      address:"Tanger, Maroc",
       send: "Envoyer le message",
       form: {
         name: "Nom",
@@ -110,7 +113,7 @@ i18n
         message: "Message",
       }},
       footer: {
-      rights: "Tous droits réservés.",
+      rights: "Copyright © —  EL.HATMI 2025.",
     },
      services: {
       title: "Mes Services",

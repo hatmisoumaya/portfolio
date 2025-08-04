@@ -27,7 +27,7 @@ export const TypingAnimation = ({ children, speed = 50 }: TypingAnimationProps) 
   }, [children, speed]);
 
   return (
-    <span className="inline-block border-r border-gray-400 pr-1 animate-pulse bg-gradient-to-r from-gray-300 to-primary bg-clip-text text-transparent">
+    <span className="inline-block border-r border-gray-400 pr-1 bg-gradient-to-br from-gray-300  to-[#6366f1] bg-clip-text text-transparent">
       {displayedText}
     </span>
   );

@@ -18,6 +18,7 @@ primary: '#6A80B9',
         poppins: ['Poppins', 'sans-serif'],
       },
       // tailwind.config.js
+    scale: ['group-hover', 'group-focus', 'swiper-slide-active'],
 
      animation: {
             'spin-slow': 'spin 8s linear infinite',
