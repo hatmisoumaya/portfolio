@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import{ useState } from 'react';
 import { Send, MessageCircle } from 'lucide-react';
 
 const Chatbot = () => {
@@ -20,7 +20,7 @@ setLoading(true);
 
 
     try {
-      const res = await fetch('http://127.0.0.1:8000/ask', {
+      const res = await fetch('https://portfolio-backend.hatmisomaya.repl.co/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message }),

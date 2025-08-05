@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { TypingAnimation } from '../registry/magicui/typing-animation';
 import { Github, Linkedin, Mail } from 'lucide-react';

@@ -1,9 +1,7 @@
 import {
-  Card,
   CardHeader,
   CardTitle,
   CardDescription,
- // CardContent,
 } from '../components/Card.jsx';
 import { BorderBeam } from '../registry/magicui/border-beam.tsx';
 import { Layout, Server, Smartphone, Cloud } from 'lucide-react';
@@ -65,6 +63,7 @@ export default function Services() {
           {service.description}
         </CardDescription>
       </CardHeader>
+      
     </div>
   </BorderBeam>
 ))}

@@ -1,7 +1,6 @@
 'use client';
 
 import { Github, Linkedin, Mail } from 'lucide-react';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const About = () => {
