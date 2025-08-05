@@ -9,12 +9,12 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './styles/globals.css'
-// import Chatbot from './components/Chatbot';
+import Chatbot from './components/Chatbot';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-          {/* <Chatbot /> */}
+          <Chatbot />
 
   </React.StrictMode>,
 );

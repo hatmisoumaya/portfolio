@@ -20,13 +20,14 @@ setLoading(true);
 
 
     try {
-      const res = await fetch('https://portfolio-backend.hatmisomaya.repl.co/ask', {
+      const res = await fetch('https://portfolio-backend-bl1i.onrender.com/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message }),
       });
 
       const data = await res.json();
+      console.log('AI Response:', data.response);
       setChat((prev) => [...prev, { role: 'bot', text: data.response }]);
       setMessage('');
     } catch (err) {
