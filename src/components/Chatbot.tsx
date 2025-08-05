@@ -32,7 +32,7 @@ setLoading(true);
       setMessage('');
     } catch (err) {
       console.error('Error:', err);
-      setChat((prev) => [...prev, { role: 'bot', text: '❌ Error connecting to AI server.' }]);
+      setChat((prev) => [...prev, { role: 'bot', text: 'Something went wrong, please try again later.' }]);
     } finally {
       setLoading(false);
     }
@@ -40,7 +40,6 @@ setLoading(true);
 
   return (
     <>
-      {/* Floating Toggle Button (only visible when chatbot is closed) */}
       {!isOpen && (
         <button
           onClick={toggleChat}
@@ -50,10 +49,9 @@ setLoading(true);
         </button>
       )}
 
-      {/* Chatbot Widget */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-[360px] h-[400px] max-w-[90%] bg-white dark:bg-neutral-900 border rounded-2xl shadow-xl flex flex-col overflow-hidden">
-          <div className="flex items-center justify-between px-4 py-3 border-b bg-[#f6f7fb] dark:bg-neutral-800">
+        <div className="fixed bottom-6 right-6 z-50 w-[360px] h-[400px] max-w-[90%] bg-white dark:bg-neutral-900 border dark:border-black rounded-xl shadow-xl flex flex-col overflow-hidden">
+          <div className="flex items-center justify-between dark:text-white px-4 py-3 border-b dark:border-black bg-[#f6f7fb] dark:bg-neutral-800">
             <h3 className="font-semibold text-sm">✨ Get to know me!</h3>
             <button onClick={toggleChat} className="text-sm hover:opacity-60">✕</button>
           </div>
@@ -69,13 +67,13 @@ setLoading(true);
               </div> 
             ))}
           </div>
-          <div className="flex items-center gap-2 px-4 py-3 border-t">
+          <div className="flex items-center gap-2 dark:border-black px-4 py-3 border-t">
             <input
               type="text"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Ask me anything..."
-              className="flex-1 px-4 py-2 border rounded-full text-sm bg-white dark:bg-neutral-800"
+              className="flex-1 px-4 py-2 border dark:border-black rounded-full text-sm bg-white dark:bg-neutral-800"
             />
             <button
               onClick={sendMessage}
