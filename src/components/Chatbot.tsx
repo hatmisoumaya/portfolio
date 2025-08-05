@@ -14,11 +14,13 @@ const Chatbot = () => {
   const sendMessage = async () => {
     if (!message.trim()) return;
 
-    setChat((prev) => [...prev, { role: 'user', text: message }]);
-    setLoading(true);
+   setChat((prev) => [...prev, { role: 'user', text: message }]);
+setMessage(''); 
+setLoading(true);
+
 
     try {
-      const res = await fetch('http://127.0.0.1:8000/ask', {
+      const res = await fetch('https://portfolio-backend.onrender.com/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message }),
@@ -29,7 +31,7 @@ const Chatbot = () => {
       setMessage('');
     } catch (err) {
       console.error('Error:', err);
-      setChat((prev) => [...prev, { role: 'bot', text: '❌ Error connecting to AI server.' }]);
+      setChat((prev) => [...prev, { role: 'bot', text: 'Something went wrong, please try again later.' }]);
     } finally {
       setLoading(false);
     }
@@ -37,7 +39,6 @@ const Chatbot = () => {
 
   return (
     <>
-      {/* Floating Toggle Button (only visible when chatbot is closed) */}
       {!isOpen && (
         <button
           onClick={toggleChat}
@@ -47,7 +48,6 @@ const Chatbot = () => {
         </button>
       )}
 
-      {/* Chatbot Widget */}
       {isOpen && (
         <div className="fixed bottom-6 right-6 z-50 w-[360px] h-[400px] max-w-[90%] bg-white dark:bg-neutral-900 border rounded-2xl shadow-xl flex flex-col overflow-hidden">
           <div className="flex items-center justify-between px-4 py-3 border-b bg-[#f6f7fb] dark:bg-neutral-800">
@@ -63,7 +63,7 @@ const Chatbot = () => {
                 }`}>
                   {msg.text}
                 </span>
-              </div>
+              </div> 
             ))}
           </div>
           <div className="flex items-center gap-2 px-4 py-3 border-t">
