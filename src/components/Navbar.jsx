@@ -88,7 +88,7 @@ const LangSwitcher = () => (
       </nav>
 
    {menuOpen && (
-  <div className="md:hidden absolute top-full left-0 w-full dark:bg-black dark:text-white bg-white text-gray rounded-b-lg p-4 space-y-3 z-40">
+  <div className="md:hidden absolute top-full left-0 w-full dark:bg-black dark:text-white bg-white text-gray rounded-xl border dark:border-black border-gray p-4 space-y-3 z-40">
     <a href="#home" onClick={() => setMenuOpen(false)} className="block text-yellow-400">{t('nav.home')}</a>
     <a href="#services" onClick={() => setMenuOpen(false)} className="block">{t('nav.services')}</a>
     <a href="#projects" onClick={() => setMenuOpen(false)} className="block">{t('nav.projects')}</a>
