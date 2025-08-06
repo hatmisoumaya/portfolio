@@ -62,7 +62,7 @@ const LangSwitcher = () => (
           <li>
             <a
               href="#contact"
-              className="border border-gray-600 px-3 py-2 rounded-full hover:bg-gray-200 transition"
+              className="border border-gray-600 px-3 py-2 rounded-full  transition"
             >
               {t('nav.contact')}
             </a>
