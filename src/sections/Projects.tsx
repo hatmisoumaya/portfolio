@@ -35,7 +35,12 @@ const links = [
 
 const Projects = () => {
   const { t } = useTranslation();
-  const projectList = t('projects.list', { returnObjects: true });
+  type ProjectItem = {
+  title: string;
+  description: string;
+};
+
+const projectList = t('projects.list', { returnObjects: true }) as ProjectItem[];
 
                   
 
