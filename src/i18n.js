@@ -103,7 +103,14 @@ i18n
       description: "An AI-powered job-matching platform that analyzes resumes and job descriptions to connect candidates with ideal roles.",
     },
   ]
-}},}
+},chatbot: {
+  title: "✨ Get to know me!",
+  close: "✕",
+  placeholder: "Ask me anything...",
+  thinking: "Thinking...",
+  error: "Something went wrong, please try again later."
+}
+},}
   ,
   fr: {
     translation: {
@@ -203,7 +210,14 @@ i18n
       description: "Une plateforme IA de mise en relation emploi qui analyse CV et offres pour trouver les correspondances idéales.",
     },
   ]
+},chatbot: {
+  title: "✨ Apprenez à me connaître !",
+  close: "✕",
+  placeholder: "Posez-moi une question...",
+  thinking: "Je réfléchis...",
+  error: "Une erreur s'est produite. Veuillez réessayer plus tard."
 }
+
   }, },},
   
 
