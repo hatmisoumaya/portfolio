@@ -71,7 +71,39 @@ i18n
           desc: "Managing CI/CD pipelines, Docker, VPS hosting, and performance tuning to ensure uptime and stability.",
         },
       },
-    },},}
+    },projects: {
+  title: "Projects",
+  view: "View Project →",
+  list: [
+    {
+      title: "ArvisaOK Website",
+      description: "Official website for an educational agency that helps Moroccan students study in Spain with visa, university, and relocation support.",
+    },
+    {
+      title: "Pamia Website",
+      description: "Corporate site for Pamia, a Barcelona-based food manufacturing company that produces dairy and bakery goods under the Esmilki brand.",
+    },
+    {
+      title: "Portfolio",
+      description: "A personal developer portfolio featuring a floating AI chatbot, project carousel, multi-language support, and modern UI/UX design.",
+    },
+    {
+      title: "Dental E-commerce",
+      description: "An e-commerce store for dental equipment, featuring Stripe integration, product management, and a secure checkout system.",
+    },{
+      title: "Dental E-commerce",
+      description: "An e-commerce store for dental equipment, featuring Stripe integration, product management, and a secure checkout system.",
+    },
+    {
+      title: "Movio App",
+      description: "A sleek movie discovery app built with Next.js and Tailwind, allowing users to browse, watch trailers, and explore movie details.",
+    },
+    {
+      title: "Easymatch App",
+      description: "An AI-powered job-matching platform that analyzes resumes and job descriptions to connect candidates with ideal roles.",
+    },
+  ]
+}},}
   ,
   fr: {
     translation: {
@@ -138,7 +170,41 @@ i18n
           desc: "Gestion des pipelines CI/CD, de l'hébergement VPS et de l'optimisation des performances pour garantir la stabilité.",
         },
       },
-    },}, },},
+    },
+    projects: {
+  title: "Projets",
+  view: "Voir le projet →",
+  list: [
+    {
+      title: "Site Web ArvisaOK",
+      description: "Site officiel d'une agence éducative aidant les étudiants marocains à étudier en Espagne avec assistance visa, université et installation.",
+    },
+    {
+      title: "Site Web Pamia",
+      description: "Site d'entreprise pour Pamia, fabricant barcelonais de produits laitiers et de boulangerie sous la marque Esmilki.",
+    },
+    {
+      title: "Portfolio",
+      description: "Un portfolio personnel de développeur avec chatbot IA flottant, carrousel de projets, support multilingue et UI/UX moderne.",
+    },
+    {
+      title: "E-commerce dentaire",
+      description: "Une boutique e-commerce d'équipements dentaires avec intégration Stripe, gestion de produits et système de paiement sécurisé.",
+    }, {
+      title: "E-commerce dentaire",
+      description: "Une boutique e-commerce d'équipements dentaires avec intégration Stripe, gestion de produits et système de paiement sécurisé.",
+    },
+    {
+      title: "Application Movio",
+      description: "Une application de découverte de films moderne permettant de parcourir, voir des bandes-annonces et explorer les détails des films.",
+    },
+    {
+      title: "Application Easymatch",
+      description: "Une plateforme IA de mise en relation emploi qui analyse CV et offres pour trouver les correspondances idéales.",
+    },
+  ]
+}
+  }, },},
   
 
     fallbackLng: 'en',
