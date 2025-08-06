@@ -45,7 +45,7 @@ const LangSwitcher = () => (
   }, [darkMode]);
 
   return (
-    <header className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] dark:text-gray-400 rounded-full
+    <header className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%]  dark:text-gray-400 rounded-full
       ${isScrolled
         ? 'bg-white dark:bg-gradient-to-l dark:from-black dark:to-gray-800 text-gray-800 shadow-md'
         : 'bg-transparent dark:shadow-gray-900 shadow-lg'} z-50 px-4 py-2`}>
@@ -81,33 +81,33 @@ const LangSwitcher = () => (
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden dark:text-white text-gray text-2xl focus:outline-none"
+          className="md:hidden dark:text-white pr-[20px] text-xl focus:outline-none"
         >
           ☰
         </button>
       </nav>
 
-      {menuOpen && (
-        <div className="md:hidden mt-2 dark:bg-black dark:text-white bg-white text-gray rounded-lg p-4 space-y-3">
-          <a href="#home" onClick={() => setMenuOpen(false)} className="block text-yellow-400">{t('nav.home')}</a>
-          <a href="#services" onClick={() => setMenuOpen(false)} className="block">{t('nav.services')}</a>
-          {/* <a href="#about" onClick={() => setMenuOpen(false)} className="block">{t('nav.about')}</a> */}
-          <a href="#projects" onClick={() => setMenuOpen(false)} className="block">{t('nav.projects')}</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)} className="block border border-gray text-gray dark:border-white dark:text-white text-center px-4 py-2 rounded-full">
-            {t('nav.contact')}
-          </a>
+   {menuOpen && (
+  <div className="md:hidden absolute top-full left-0 w-full dark:bg-black dark:text-white bg-white text-gray rounded-b-lg p-4 space-y-3 z-40">
+    <a href="#home" onClick={() => setMenuOpen(false)} className="block text-yellow-400">{t('nav.home')}</a>
+    <a href="#services" onClick={() => setMenuOpen(false)} className="block">{t('nav.services')}</a>
+    <a href="#projects" onClick={() => setMenuOpen(false)} className="block">{t('nav.projects')}</a>
+    <a href="#contact" onClick={() => setMenuOpen(false)} className="block border border-gray text-gray dark:border-white dark:text-white text-center px-4 py-2 rounded-full">
+      {t('nav.contact')}
+    </a>
 
-          <div className="flex items-center justify-between pt-3">
-            <LangSwitcher />
-            <button
-              onClick={toggleDarkMode}
-              className="p-1.5 ml-3 border border-white rounded-full hover:bg-white hover:text-[#1B3D2F] transition"
-            >
-              {darkMode ? <HiOutlineSun size={16} /> : <HiOutlineMoon size={16} />}
-            </button>
-          </div>
-        </div>
-      )}
+    <div className="flex items-center justify-between pt-3">
+      <LangSwitcher />
+      <button
+        onClick={toggleDarkMode}
+        className="p-1.5 ml-3 border border-white rounded-full hover:bg-white hover:text-[#1B3D2F] transition"
+      >
+        {darkMode ? <HiOutlineSun size={16} /> : <HiOutlineMoon size={16} />}
+      </button>
+    </div>
+  </div>
+)}
+
     </header>
   );
 };
