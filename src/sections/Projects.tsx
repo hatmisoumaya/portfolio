@@ -52,8 +52,8 @@ const projectList = t('projects.list', { returnObjects: true }) as ProjectItem[]
       {t('projects.title')}
         </h2>
 
-        <Swiper
-          effect="coverflow"
+       <Swiper
+  effect="coverflow"
   grabCursor
   centeredSlides={true}
   slidesPerView={3}
@@ -64,11 +64,18 @@ const projectList = t('projects.list', { returnObjects: true }) as ProjectItem[]
     depth: 200,
     modifier: 2.5,
     slideShadows: false,
-  }}
+  }}   breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
   navigation
   modules={[EffectCoverflow, Navigation]}
-  className="w-full max-w-6xl"
+  className="w-full"
 >
+
+
           {projectList.map((project, index) => (
             <SwiperSlide
   key={index}
