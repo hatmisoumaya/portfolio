@@ -81,19 +81,19 @@ const LangSwitcher = () => (
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white text-2xl focus:outline-none"
+          className="md:hidden dark:text-white text-gray text-2xl focus:outline-none"
         >
           ☰
         </button>
       </nav>
 
       {menuOpen && (
-        <div className="md:hidden mt-2 bg-[#1B3D2F] text-white rounded-lg p-4 space-y-3">
+        <div className="md:hidden mt-2 dark:bg-black dark:text-white bg-white text-gray rounded-lg p-4 space-y-3">
           <a href="#home" onClick={() => setMenuOpen(false)} className="block text-yellow-400">{t('nav.home')}</a>
           <a href="#services" onClick={() => setMenuOpen(false)} className="block">{t('nav.services')}</a>
           <a href="#about" onClick={() => setMenuOpen(false)} className="block">{t('nav.about')}</a>
           <a href="#projects" onClick={() => setMenuOpen(false)} className="block">{t('nav.projects')}</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)} className="block bg-white text-[#1B3D2F] text-center px-4 py-2 rounded-full">
+          <a href="#contact" onClick={() => setMenuOpen(false)} className="block border border-gray text-gray dark:border-white dark:text-white text-center px-4 py-2 rounded-full">
             {t('nav.contact')}
           </a>
 

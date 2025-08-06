@@ -74,7 +74,12 @@ const Projects = () => {
     depth: 200,
     modifier: 2.5,
     slideShadows: false,
-  }}
+  }}   breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
   navigation
   modules={[EffectCoverflow, Navigation]}
   className="w-full max-w-6xl"
@@ -85,9 +90,9 @@ const Projects = () => {
           {projects.map((project, index) => (
       <SwiperSlide
   key={index}
-  className="swiper-slide w-[260px] sm:w-[300px] md:w-[340px] transition-all pb-10 duration-300 ease-in-out"
+  className="swiper-slide w-[80%] sm:w-[90%] md:w-[80%] transition-all pb-10 duration-300 ease-in-out"
 >
-  <div className="bg-white dark:bg-black rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-800 group">
+  <div className="bg-white dark:bg-black  rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-800 group">
     <img
       src={project.image}
       alt={project.title}

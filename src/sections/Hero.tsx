@@ -9,8 +9,8 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white dark:bg-gradient-to-l bg-white bg-gradient-to-l from-gray-100 to-white dark:from-black dark:to-gray-700 pt-[16%] pb-[9%] px-6 md:px-16">
-      <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-6">
+<section className="bg-white dark:bg-gradient-to-l bg-white bg-gradient-to-l from-gray-100 to-white dark:from-black dark:to-gray-700 pt-[30%] md:pt-[16%] pb-[9%] px-6 md:px-16">
+      <div className="max-w-4xl mx-auto  flex flex-col items-center text-center space-y-6">
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
           {t('hero.role1')} <TypingAnimation>Sooumaya</TypingAnimation>,<br />
